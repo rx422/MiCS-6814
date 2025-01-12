@@ -46,6 +46,8 @@
     #define _SERIAL Serial
 #elif defined (ARDUINO_ARCH_ESP32)
     #define _SERIAL Serial
+#elif defined (ARDUINO_ARCH_ESP32)
+    #define _SERIAL Serial
 #else
     #error "Architecture not matched"
 #endif
