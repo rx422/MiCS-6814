@@ -44,10 +44,11 @@
     #define _SERIAL Serial
 #elif defined (ARDUINO_ARCH_AVR)
     #define _SERIAL Serial
+#elif defined (ARDUINO_ARCH_ESP32)
+    #define _SERIAL Serial
 #else
     #error "Architecture not matched"
 #endif
-
 
 #define DEFAULT_I2C_ADDR    0x04
 
