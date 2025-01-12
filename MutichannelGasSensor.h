@@ -44,8 +44,18 @@
     #define _SERIAL Serial
 #elif defined (ARDUINO_ARCH_AVR)
     #define _SERIAL Serial
+#elif defined (ARDUINO_ARCH_ESP32)
+    #define _SERIAL Serial
 #else
     #error "Architecture not matched"
+#endif
+
+#ifdef DEBUG
+#define DEBUG_PRINT(x) _SERIAL.print(x)
+#define DEBUG_PRINTLN(x) _SERIAL.println(x)
+#else
+#define DEBUG_PRINT(x)
+#define DEBUG_PRINTLN(x)
 #endif
 
 
